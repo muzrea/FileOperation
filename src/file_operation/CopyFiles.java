@@ -5,6 +5,12 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 public class CopyFiles {
+    public static void main(String[] args) throws Exception {
+        String targetFilePath = "E:\\java_training_camp\\files\\my_file";
+        String copyFilePath = "E:\\java_training_camp\\files\\copy_file";
+        CopyFiles copyMyTxt = new CopyFiles();
+        copyMyTxt.copyFolder(targetFilePath, copyFilePath);
+    }
     public void copyFile(String targetFilePath, String copyFilePath) {
         File targetFile = new File(targetFilePath);
         if (targetFile.exists()) {
